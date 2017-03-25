@@ -2,9 +2,9 @@ const fizzBuzzer = require('../fizzBuzzer.js');
 
 const should = require('chai').should();
 
-describe('fizzBuzzer', () => {
+describe('fizzBuzzer', function() {
 
-  it('should return fizz-buzz if num % 15 === 0', () => {
+  it('should return fizz-buzz if num % 15 === 0', function() {
     const expectedInputs = [0, 15, 30, 45, 1500, 225];
 
     expectedInputs.forEach((num) => {
@@ -13,7 +13,7 @@ describe('fizzBuzzer', () => {
     });
   });
 
-  it('should return buzz if num % 5 === 0', () => {
+  it('should return buzz if num % 5 === 0', function() {
     const expectedInputs = [10, 20, 5, -5, 85];
     expectedInputs.forEach((num) => {
       const answer = fizzBuzzer(num);
@@ -21,7 +21,7 @@ describe('fizzBuzzer', () => {
     });
   });
 
-  it('should return fizz if num % 3 === 0', () => {
+  it('should return fizz if num % 3 === 0', function() {
     const expectedInputs = [3, -3, -6, 24];
     expectedInputs.forEach((num) => {
       const answer = fizzBuzzer(num);
@@ -29,7 +29,7 @@ describe('fizzBuzzer', () => {
     });
   });
 
-  it('should return number if not divisible by 3, 5, or 15', () => {
+  it('should return number if not divisible by 3, 5, or 15', function() {
     const expectedInputs = [1, 17, 68, -17];
     expectedInputs.forEach((num) => {
       const answer = fizzBuzzer(num);
@@ -37,7 +37,7 @@ describe('fizzBuzzer', () => {
     });
   });
 
-  it('should throw error if args not number', () => {
+  it('should throw error if args not number', function() {
     const notNumberInputs = ['1', true, 'aString', []];
     notNumberInputs.forEach((input) => {
       (function(){
